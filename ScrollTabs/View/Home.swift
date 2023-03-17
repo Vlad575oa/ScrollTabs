@@ -78,7 +78,11 @@ struct Home: View {
       Image(product.productImage)
         .resizable()
         .aspectRatio(contentMode: .fit)
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(width: 100, height: 100)
+        .background {
+          RoundedRectangle(cornerRadius: 15, style: .continuous)
+            .fill(.white)
+        }
     }
     .frame(maxWidth: .infinity, alignment: .leading)
   }
